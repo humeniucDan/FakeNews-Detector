@@ -25,9 +25,9 @@ def extract_text(url: str):
     clean_text = re.sub(r'\s+', ' ', text).strip()
 
     return clean_text
-
-print(
-    extract_text(
-        'https://www.newstatesman.com/culture/music/2017/05/goodbye-greatest-billionaire-lesbian-couple-never-existed'
+if __name__ == "__main__":
+    print(
+        extract_text(
+            'https://www.newstatesman.com/culture/music/2017/05/goodbye-greatest-billionaire-lesbian-couple-never-existed'
+        )
     )
-)

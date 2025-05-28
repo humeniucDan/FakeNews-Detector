@@ -44,10 +44,10 @@ def extract_entity_relations(news_article:str):
     text_json = text_results.strip('`').removeprefix("json\n").removesuffix("```")
     parsed_list = json.loads(text_json)
     return parsed_list
+if __name__ == '__main__':
+    news_article = "[BREAKING] Lesbian Chinese Billionaires, Meng Mei Qi and Wu Xuan Yi, marry. Making them the richest couple alive."
+    parsed_list = extract_entity_relations(news_article)
 
-news_article = "[BREAKING] Lesbian Chinese Billionaires, Meng Mei Qi and Wu Xuan Yi, marry. Making them the richest couple alive."
-parsed_list = extract_entity_relations(news_article)
-
-print("Successfully parsed data:")
-for item in parsed_list:
-    print(item)
+    print("Successfully parsed data:")
+    for item in parsed_list:
+        print(item)

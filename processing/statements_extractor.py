@@ -42,7 +42,7 @@ def predict_entities(text, model):
         if token not in ["[CLS]", "[SEP]"]:
             print(f"{token}: {label}")
 
-
-print(device)
-sample_text = "Lesbian Chinese Billionaires, Meng Mei Qi and Wu Xuan Yi, marry. Making them the richest couple alive"
-predict_entities(sample_text, model)
+if __name__ == "__main__":
+    print(device)
+    sample_text = "Lesbian Chinese Billionaires, Meng Mei Qi and Wu Xuan Yi, marry. Making them the richest couple alive"
+    predict_entities(sample_text, model)

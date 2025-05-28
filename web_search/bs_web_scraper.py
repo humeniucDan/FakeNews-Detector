@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 
-def search_web(query: str, first_results: int = 2):
+def search_web(query: str, first_results: int = 1):
     headers = {
         'User-Agent': 'Mozilla/5.0'
     }
@@ -23,7 +23,7 @@ def search_web(query: str, first_results: int = 2):
 
     return results
 
-
-results = search_web('nicusor dan are media generala bac 7.4')
-for result in results:
-    print(result)
+if __name__ == "__main__":
+    results = search_web('nicusor dan are media generala bac 7.4')
+    for result in results:
+        print(result)
